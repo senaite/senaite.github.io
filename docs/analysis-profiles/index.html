@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Analysis Profiles · SENAITE</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In the previous sections you added single Analyses for each Sample, which can"/><meta name="docsearch:version" content="1.3.2"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Analysis Profiles · SENAITE"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/senaite/senaite.github.io/"/><meta property="og:description" content="In the previous sections you added single Analyses for each Sample, which can"/><meta property="og:image" content="https://github.com/senaite/senaite.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/senaite/senaite.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/senaite_product_logo_text.svg" alt="SENAITE"/><h2 class="headerTitleWithLogo">SENAITE</h2></a><a href="/versions"><h3>1.3.2</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/features" target="_self">Features</a></li><li class=""><a href="/enterprisesolution" target="_self">Enterprise solution</a></li><li class="siteNavGroupActive"><a href="/docs/quickstart" target="_self">Documentation</a></li><li class=""><a href="/versions" target="_self">Versions</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Working with Analyses</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/quickstart">Quickstart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Samples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/sample-basics">Sample Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-copy">Copy Samples</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-barcodes">Sample Barcodes</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-analyses">Sample Analyses</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-partitions">Sample Partitions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Analyses<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/analysis-specifications">Analysis Specifications</a></li><li class="navListItem"><a class="navItem" href="/docs/analysis-calculations">Analysis Calculations</a></li><li class="navListItem"><a class="navItem" href="/docs/analysis-categorization">Analysis Categorization</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/analysis-profiles">Analysis Profiles</a></li><li class="navListItem"><a class="navItem" href="/docs/analysis-templates">Analysis Templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Worksheets<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/worksheet-basics">Worksheet Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/worksheet-control-references">Worksheet Control References</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Analysis Profiles</h1></header><article><div><span><p>In the previous sections you added single Analyses for each Sample, which can
+become difficult to manage when you have numerous <em>Analysis Services</em> in the
+system. Also some labs provide package prices on tests that encompass several
+Analyses instead of pricing them individually.</p>
+<p>This is where <em>Analysis Profiles</em> come in and simplify the handling and creation
+process of new created Samples. Think of <em>Analysis Profiles</em> like a &quot;Recipe&quot; or
+a &quot;Makefile&quot; that defines the <em>Analyses</em> to be added to a Sample.</p>
+<h2><a class="anchor" aria-hidden="true" id="add-global-analysis-profiles"></a><a href="#add-global-analysis-profiles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add global Analysis Profiles</h2>
+<p><em>Analysis Profiles</em> can be added globally for the whole LIMS or per <em>Client</em>.
+Here we are going to add one that is available globally.</p>
+<p>Click on the ⚙️button in the upper right corner and choose the <em>Analysis Profiles</em>
+tile and press then the <em>Add</em> Button.</p>
+<p><img src="/screenshots/add_analysis_profile_screen_default.png" alt="Add Analysis Profile" title="Add Analysis Profile">
+<img src="/screenshots/add_analysis_profile_screen_analyses.png" alt="Add Analysis Profile" title="Add Analysis Profile">
+<img src="/screenshots/add_analysis_profile_screen_accounting.png" alt="Add Analysis Profile" title="Add Analysis Profile"></p>
+<p>Enter the following values in the add form:</p>
+<ul>
+<li>Title: <code>Total Hardness</code></li>
+<li>Description: <code>Total permanent hardness of water (CACO3)</code></li>
+<li>Analyses: Activate <code>Calcium</code>, <code>Magnesium</code> and <code>Total Hardness</code> from the listing</li>
+<li>Accounting: Activate <code>Use Analysis Profile Price</code></li>
+<li>Price (excluding VAT): <code>25</code></li>
+<li>VAT %: <code>19</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="apply-an-analysis-profile-to-a-sample"></a><a href="#apply-an-analysis-profile-to-a-sample" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Apply an Analysis Profile to a Sample</h2>
+<p>Now it is time to apply the <em>Analysis Profile</em> to a Sample. Navigate to
+the Samples tab of our Happy Hills Client and create a new Sample.</p>
+<p>Add the new created <em>Analysis Profile</em> in the corresponding field.</p>
+<p><img src="/screenshots/add_sample_with_profile.png" alt="Add Sample with Profile" title="Add Sample with Profile"></p>
+<p>Scroll now down to the <em>Lab Analyses</em> row and click it to expand the selected
+Analyses. The Analyses from our previously created <em>Analysis Profile</em> were
+selected automatically and clicking on the 🛈 Button will show you that their
+origin is the <em>Total Hardness</em> profile.</p>
+<p><img src="/screenshots/add_sample_with_profile_analyses.png" alt="Add Sample with Profile" title="Add Sample with Profile"></p>
+<p><strong>☝️Note:</strong>
+Analyses coming from an <em>Analysis Profile</em> cannot be deselected and are
+therefore locked (symbolized with the 🔒 icon).
+Removing them would require to remove the corresponding <em>Analysis Profile</em> first.</p>
+<p>Also note that the price has been taken from the profile and that you can add as
+many profiles for a given sample as you like.</p>
+<p><img src="/screenshots/add_sample_with_profile_price.png" alt="Add Sample with Profile" title="Add Sample with Profile"></p>
+<p>Add now the remaining required fields and press the <em>Save</em> button when you are
+done.</p>
+<p>Navigate now to the new created Sample View to inspect the Sample Metadata.</p>
+<p><img src="/screenshots/sample_with_profile_view.png" alt="Sample with Profile View" title="Sample with Profile View"></p>
+<p><strong>☝️Note:</strong>
+Although most of the Sample fields can be modified after creation, <em>Analysis
+Profiles</em> can not. Therefore, if an Analysis Profile has been erroneous added,
+the whole Sample has to be cancelled and recreated with the right Profile(s).</p>
+<p>Congratulations 🙌 you successfully learned the advantages of using <em>Analysis Profiles</em></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 24.10.2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/analysis-categorization"><span class="arrow-prev">← </span><span>Analysis Categorization</span></a><a class="docs-next button" href="/docs/analysis-templates"><span>Analysis Templates</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#add-global-analysis-profiles">Add global Analysis Profiles</a></li><li><a href="#apply-an-analysis-profile-to-a-sample">Apply an Analysis Profile to a Sample</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Documentation</h5><a href="/docs/en/installation.html">Installation</a><a href="/docs/en/quickstart.html">Quickstart</a><a href="/docs/en/sample-basics.html">Sample Basics</a></div><div><h5>Community</h5><a target="_blank" href="https://community.senaite.org">Community Site</a><a target="_blank" href="https://sourceforge.net/projects/senaite/lists/senaite-users">Mailing List</a><a target="_blank" href="https://gitter.im/senaite/Lobby">Gitter Chat</a></div><div><h5>More</h5><a href="https://github.com/senaite">GitHub</a><a class="github-button" href="https://github.com/senaite/senaite.core" data-icon="octicon-star" data-count-href="/senaite/senaite.core/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/senaitelims" class="twitter-follow-button">Follow @senaitelims</a></div></div></section><a href="https://www.senaite.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/senaite_product_logo_grey.svg" alt="SENAITE LIMS"/></a><section class="copyright">Copyright © 2017-2019 <a href="https://www.ridingbytes.com" target="_blank">RIDING BYTES GmbH</a> &amp; <a href="https://www.naralabs.com" target="blank">NARALABS S.L.</a></section><section class="privacy"><a href="privacy">Privacy policy and web legal announcement</a></section><img src="https://piwik.ridingbytes.com/matomo.php?idsite=3&amp;rec=1" style="border:0" alt=""/></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>

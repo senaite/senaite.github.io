@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Analysis Specifications · SENAITE</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In the previous Section you learned how to manage Analyses and how to add Result"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Analysis Specifications · SENAITE"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/senaite/senaite.github.io/"/><meta property="og:description" content="In the previous Section you learned how to manage Analyses and how to add Result"/><meta property="og:image" content="https://github.com/senaite/senaite.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/senaite/senaite.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/senaite_product_logo_text.svg" alt="SENAITE"/><h2 class="headerTitleWithLogo">SENAITE</h2></a><a href="/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/features" target="_self">Features</a></li><li class=""><a href="/enterprisesolution" target="_self">Enterprise solution</a></li><li class="siteNavGroupActive"><a href="/docs/next/quickstart" target="_self">Documentation</a></li><li class=""><a href="/versions" target="_self">Versions</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Working with Analyses</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/next/quickstart">Quickstart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Samples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/sample-basics">Sample Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-copy">Copy Samples</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-barcodes">Sample Barcodes</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-analyses">Sample Analyses</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-partitions">Sample Partitions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Analyses<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/docs/next/analysis-specifications">Analysis Specifications</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-calculations">Analysis Calculations</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-categorization">Analysis Categorization</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-profiles">Analysis Profiles</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-templates">Analysis Templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Worksheets<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/worksheet-basics">Worksheet Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/next/worksheet-control-references">Worksheet Control References</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Analysis Specifications</h1></header><article><div><span><p>In the previous Section you learned how to manage Analyses and how to add Result
+Ranges for single Analyses. In this section we are going a step further and
+create an <em>Analysis Specification</em> for the whole Sample and learn about inclusive
+and exclusive borders in the minimum and maximum Ranges.</p>
+<h2><a class="anchor" aria-hidden="true" id="add-global-analysis-specifications"></a><a href="#add-global-analysis-specifications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add global Analysis Specifications</h2>
+<p><em>Analyses Specifications</em> are defined per <em>Sample Type</em> and can be added in the
+<em>LIMS Setup</em>.
+Click on the ⚙️button in the upper right corner and chose the <em>Analysis
+Specifications</em> tile and press then the <em>Add</em> Button.</p>
+<p><img src="/screenshots/add_analysis_specification_screen.png" alt="Add Analysis Specification" title="Add Analysis Specification"></p>
+<p>Enter the following values in the add form:</p>
+<ul>
+<li>Sample Type: <code>Water</code></li>
+<li>Title: <code>Water</code></li>
+<li>Description: <code>Analysis Specifications for Samples with the Sample Type &quot;Water&quot;</code></li>
+<li>Specifications:
+<ul>
+<li>Calcium:
+<ul>
+<li><code>Min warn: 9.5</code></li>
+<li><code>Min Operator: &gt;</code></li>
+<li><code>Min: 9</code></li>
+<li><code>Max Operator: &lt;</code></li>
+<li><code>Max: 11</code></li>
+<li><code>Max warn: 10.5</code></li>
+</ul></li>
+<li>Magnesium:
+<ul>
+<li><code>Min warn: 9.5</code></li>
+<li><code>Min Operator: &gt;</code></li>
+<li><code>Min: 9</code></li>
+<li><code>Max Operator: &lt;=</code></li>
+<li><code>Max: 11</code></li>
+<li><code>Max warn: 10.5</code></li>
+</ul></li>
+<li>Total Hardness:
+<ul>
+<li><code>Min warn: 9.5</code></li>
+<li><code>Min Operator: &gt;=</code></li>
+<li><code>Min: 9</code></li>
+<li><code>Max Operator: &lt;=</code></li>
+<li><code>Max: 11</code></li>
+<li><code>Max warn: 10.5</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Click the <em>Save</em> button when you are done.</p>
+<h3><a class="anchor" aria-hidden="true" id="min-max-operators-explained"></a><a href="#min-max-operators-explained" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Min/Max Operators Explained</h3>
+<p>You might have wondered about the logic of the <em>Min Operators</em> <code>&gt;</code> and <code>&gt;=</code> and
+the <em>Max Operators</em> <code>&lt;</code> and <code>&lt;=</code> about being maybe the wrong way around, because
+according to Wikipedia, the &quot;greater than&quot; sign is <code>&gt;</code><a href="https://en.wikipedia.org/wiki/Greater-than_sign">¹</a> and the &quot;less than&quot;
+is <code>&lt;</code><a href="https://en.wikipedia.org/wiki/Less-than_sign">²</a>.</p>
+<p>However, the logic used here specifies everything that is <strong>in range</strong> rather
+than <strong>out of range</strong> with these operators.</p>
+<p>Therefore, the <code>Min operator</code> states that everything greater or equal to the
+entered value is <em>in range</em>, and the <code>Max operator</code> states that everything lower
+or equal to the entered value is <em>in range</em>.</p>
+<p>To sum it up this means that values of <code>9</code> and below and <code>11</code> and above are out of
+range for <code>Calcium</code>, but not for <code>Total Hardness</code>, where <code>9</code> and <code>11</code> are included
+by the <code>Min Operator</code> and <code>Max Operator</code>. The <code>Magnesium</code> Analysis excludes <code>9</code> for
+the minimum allowed value, but includes 11 for the maximum allowed value.</p>
+<h2><a class="anchor" aria-hidden="true" id="apply-an-analysis-specification-to-a-sample"></a><a href="#apply-an-analysis-specification-to-a-sample" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Apply an Analysis Specification to a Sample</h2>
+<p>Now it is time to apply the <em>Analysis Specification</em> to a Sample. Navigate to
+the listing of all Samples and copy one of the existing Samples.</p>
+<p>Add the new created <em>Analysis Specification</em> in the corresponding field. Also
+make sure that there are <em>no manual result ranges</em> set for the selected Analyses
+in the <em>Add form</em> from the previous examples, because they would take
+precedence over the <em>Analysis Specifications</em> set in the Sample.
+Press the <em>Save</em> button when you are done.</p>
+<p><img src="/screenshots/add_sample_with_specification.png" alt="Add Sample with Specification" title="Add Sample with Specification"></p>
+<p><strong>☝️Note:</strong>
+The <code>(Lab)</code> Suffix in the name distinguishes between global <code>(Lab)</code> and Client
+<code>(Client)</code> located <em>Analysis Specifications</em>.</p>
+<p>Receive the Sample after it was registered as you did in the section <a href="sample-basics#receive-the-sample">Sample
+Basics</a> and make sure you are in the <em>View</em>
+tab of the Sample.</p>
+<p><img src="/screenshots/sample_view_with_specifications.png" alt="Sample with Specification" title="Sample with Specification"></p>
+<p><strong>☝️Note:</strong>
+The notation of the braces <code>(</code> <code>)</code> and brackets <code>[</code> <code>]</code> next to the values
+define if the values are included or excluded. For instance, <code>(0,10]</code> means
+greater than 0 and less than or equal to 10, while <code>[0,10)</code> means greater than
+or equal to 0 and less than 10.</p>
+<p>Enter the following values as results:</p>
+<ul>
+<li>Calcium: <code>9</code></li>
+<li>Magnesium: <code>9</code></li>
+<li>Total Hardness: <code>9</code></li>
+</ul>
+<p>Press the <em>Save</em> button when you are done and note the <em>Exclamation Mark</em> next
+to the <code>Calcium</code> and <code>Magnesium</code> Analyses notifying that these values are out of
+range when adding the mouse over it.</p>
+<p><strong>☝️Note:</strong>
+There is currently a bug in SENAITE Core that you will lose the <code>Min/Max Operator</code> settings when you manage the Analyses in a Sample created with an
+<em>Analysis Specification</em> that defines them.
+Fortunately, there is a workaround that you manually remove all the
+Specifications in the <em>Manage Analyses</em> screen before saving. This will re-use
+the values from the <em>Analysis Specification</em>.</p>
+<h2><a class="anchor" aria-hidden="true" id="publish-out-of-range-analyses"></a><a href="#publish-out-of-range-analyses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Publish Out of Range Analyses</h2>
+<p>Please submit, verify and publish the results as you have done in the
+<a href="sample-basics#receive-the-sample">Sample Basics</a> section to view the preview
+of the final report.</p>
+<p><img src="/screenshots/sample_publish_preview_out_of_range.png" alt="Sample Report Preview" title="Sample Report Preview"></p>
+<p>The final report shows the defined ranges and added a red warning sign next to
+the results that are out of range.</p>
+<p><strong>☝️Note:</strong>
+The final <em>Analysis Report</em> can be highly customized to meet almost any lab
+requirement. Contact the professional service providers for more details.</p>
+<p>Congratulations 🙌 you successfully learned how to apply <em>Analysis Specifications</em> to Samples</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 24.10.2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/sample-partitions"><span class="arrow-prev">← </span><span>Sample Partitions</span></a><a class="docs-next button" href="/docs/next/analysis-calculations"><span>Analysis Calculations</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#add-global-analysis-specifications">Add global Analysis Specifications</a><ul class="toc-headings"><li><a href="#min-max-operators-explained">Min/Max Operators Explained</a></li></ul></li><li><a href="#apply-an-analysis-specification-to-a-sample">Apply an Analysis Specification to a Sample</a></li><li><a href="#publish-out-of-range-analyses">Publish Out of Range Analyses</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Documentation</h5><a href="/docs/en/installation.html">Installation</a><a href="/docs/en/quickstart.html">Quickstart</a><a href="/docs/en/sample-basics.html">Sample Basics</a></div><div><h5>Community</h5><a target="_blank" href="https://community.senaite.org">Community Site</a><a target="_blank" href="https://sourceforge.net/projects/senaite/lists/senaite-users">Mailing List</a><a target="_blank" href="https://gitter.im/senaite/Lobby">Gitter Chat</a></div><div><h5>More</h5><a href="https://github.com/senaite">GitHub</a><a class="github-button" href="https://github.com/senaite/senaite.core" data-icon="octicon-star" data-count-href="/senaite/senaite.core/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/senaitelims" class="twitter-follow-button">Follow @senaitelims</a></div></div></section><a href="https://www.senaite.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/senaite_product_logo_grey.svg" alt="SENAITE LIMS"/></a><section class="copyright">Copyright © 2017-2019 <a href="https://www.ridingbytes.com" target="_blank">RIDING BYTES GmbH</a> &amp; <a href="https://www.naralabs.com" target="blank">NARALABS S.L.</a></section><section class="privacy"><a href="privacy">Privacy policy and web legal announcement</a></section><img src="https://piwik.ridingbytes.com/matomo.php?idsite=3&amp;rec=1" style="border:0" alt=""/></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
