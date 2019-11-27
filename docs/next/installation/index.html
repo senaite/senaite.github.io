@@ -61,11 +61,13 @@ installation instructions depend therefore mostly on the successful
 <p>We recommend to install SENAITE on <a href="https://ubuntu.com/download/server" title="Ubuntu Linux">Ubuntu</a> or <a href="https://www.debian.org/distrib/netinst" title="Debian Linux">Debian</a> Linux.
 Installation on MacOS works as well, but needs additional packages installed
 via <a href="https://brew.sh" title="The missing package manager for macOS (or Linux)">Homebrew</a>.</p>
-<p>In this secion we will mostly use Ubuntu as reference system.</p>
+<p>In this secion we will mostly use <strong>Ubuntu 18.04 LTS</strong> as reference system.</p>
 <p>The installation on other Linux distributions, MacOS or Windows is not covered here.</p>
 <h2><a class="anchor" aria-hidden="true" id="a-note-about-versions"></a><a href="#a-note-about-versions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A note about Versions</h2>
 <p>The current codebase of SENAITE is at the moment only compatible with the latest
-version 4 of Plone. This version of Plone works only with <a href="https://www.python.org" title="Python Programming Language">Python</a> 2.x.</p>
+version 4 of Plone.</p>
+<p><strong>☝️Note:</strong>
+<strong>This version of Plone works only with <a href="https://www.python.org" title="Python Programming Language">Python</a> 2.x.</strong></p>
 <h2><a class="anchor" aria-hidden="true" id="python"></a><a href="#python" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Python</h2>
 <p>Most UNIX based operating system (Linux/Mac OSX) ship already with a Python
 interpreter installed. However, it is not recommended to use the system
@@ -78,26 +80,41 @@ following tools:</p>
 <li>Virtualenv: <a href="https://pypi.org/project/virtualenv">https://pypi.org/project/virtualenv</a></li>
 <li>Miniconda: <a href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a></li>
 </ul>
-<p>In this manual we will use Miniconda.</p>
+<p>In this manual we will use <strong>Miniconda</strong>.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-new-user"></a><a href="#create-a-new-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a new User</h2>
+<p>Create a new user <code>senaite</code> in your system with the following command:</p>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> adduser --home /home/senaite --shell /bin/bash senaite</span>
+</code></pre>
+<p>And make sure you became this user within the following sections:</p>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> sudo su - senaite</span>
+<span class="hljs-meta">$</span><span class="bash"> whoami</span>
+senaite
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="miniconda"></a><a href="#miniconda" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Miniconda</h2>
-<p>Please use your terminal to run the commands listed below.</p>
-<ol>
-<li>Download the <code>Python 2.7</code> version for your operating system</li>
-<li>Create a virtual environment with <code>conda create --name senaite</code></li>
-<li>Activate the environment with <code>conda activate senaite</code></li>
-</ol>
+<p>Download and install the <code>Python 2.7</code> version for your operating system:</p>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> wget https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh</span>
+<span class="hljs-meta">$</span><span class="bash"> ~/Miniconda2-latest-Linux-x86_64.sh</span>
+<span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">source</span> ~/.bashrc</span>
+</code></pre>
+<p><em>You can accept the default settings of the miniconda installer</em></p>
+<p>Create a new Python environment with the name <code>senaite</code>:</p>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> conda create --name senaite python=2.7</span>
+</code></pre>
+<p>Activate the Python environment:</p>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> conda active senaite</span>
+</code></pre>
 <p>The command <code>which python</code> can be used to check if the right Python interpreter
-is active in the current shell:</p>
+is active in the current session:</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">which</span> python</span>
-~/miniconda2/envs/senaite/bin/python
+/home/senaite/miniconda2/envs/senaite/bin/python
 </code></pre>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> python</span>
-Python 2.7.16 |Anaconda, Inc.| (default, May  1 2018, 18:37:05)
-[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
+Python 2.7.17 |Anaconda, Inc.| (default, Oct 21 2019, 19:04:46)
+[GCC 7.3.0] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 <span class="hljs-meta">&gt;</span><span class="bash">&gt;&gt;</span>
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="install-dependencies"></a><a href="#install-dependencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install dependencies</h2>
+<h2><a class="anchor" aria-hidden="true" id="install-system-dependencies"></a><a href="#install-system-dependencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install System dependencies</h2>
 <p>Install the required dependencies for SENAITE:</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> sudo apt install build-essential</span>
 <span class="hljs-meta">$</span><span class="bash"> sudo apt install python2.7 python2.7-dev</span>
@@ -107,26 +124,25 @@ Type "help", "copyright", "credits" or "license" for more information.
 <h2><a class="anchor" aria-hidden="true" id="download-the-plone-unified-installer"></a><a href="#download-the-plone-unified-installer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download the Plone unified installer</h2>
 <p>The <a href="https://github.com/plone/Installers-UnifiedInstaller" title="Plone Unified Installer">Plone Unified Installer</a> installs Plone and its
 dependencies from source on most Unix-like platforms.</p>
-<pre><code class="hljs">$ wget --no-check-certificate https:<span class="hljs-comment">//launchpad.net/plone/4.3/4.3.18/+download/Plone-4.3.18-UnifiedInstaller.tgz</span>
-$ tar xzf Plone<span class="hljs-number">-4.3</span><span class="hljs-number">.18</span>-UnifiedInstaller.tgz
-$ cd Plone<span class="hljs-number">-4.3</span><span class="hljs-number">.18</span>-UnifiedInstaller
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> wget --no-check-certificate https://launchpad.net/plone/4.3/4.3.19/+download/Plone-4.3.19-UnifiedInstaller.tgz</span>
+<span class="hljs-meta">$</span><span class="bash"> tar xzf Plone-4.3.19-UnifiedInstaller.tgz</span>
+<span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> Plone-4.3.19-UnifiedInstaller</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="install-plone"></a><a href="#install-plone" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install Plone</h2>
 <p>Next step is to install Plone with the provided <code>install.sh</code> shell script:</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> ./install.sh standalone --target=/home/senaite --instance=senaitelims --password=admin</span>
 </code></pre>
-<p><strong>Note</strong>
-We install SENAITE in the directory <code>/home/senaite</code> and we have set the admin
-password to <code>admin</code></p>
+<p><strong>☝️Note:</strong>
+We install SENAITE in the directory <code>/home/senaite/senaitelims</code> and we have set
+the admin password to <code>admin</code></p>
 <h2><a class="anchor" aria-hidden="true" id="install-senaite"></a><a href="#install-senaite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install SENAITE</h2>
 <p>To install SENAITE we need to modify the generated <code>buildout.cfg</code> config file.
 <a href="http://www.buildout.org/en/latest/" title="Buildout, an automation tool written in and extended with Python">Buildout</a> is an automation tool written in and extended with Python:</p>
-<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> /home/senaite</span>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> /home/senaite/senaitelims</span>
 <span class="hljs-meta">$</span><span class="bash"> vim buildout.cfg</span>
 </code></pre>
-<p><strong>Note</strong>
-You can use <code>nano</code> or any other text editor you feel comfortable with instead of
-<code>vim</code>.</p>
+<p><strong>☝️Note:</strong>
+You can use <code>nano</code> or any other text editor you feel comfortable with</p>
 <p>Add <code>senaite.lims</code> to the <code>eggs</code> section of the file:</p>
 <pre><code class="hljs css language-config">[buildout]
 ...
@@ -135,9 +151,37 @@ eggs =
     senaite.lims
 zcml =
 ...
+
+[versions]
+zc.buildout =
+setuptools =
 </code></pre>
+<p><strong>☝️Note:</strong>
+The version unpinning of <code>zc.buildout</code> and <code>setuptools</code> is important!</p>
+<h3><a class="anchor" aria-hidden="true" id="upgrade-pip-setuptools-and-zcbuildout"></a><a href="#upgrade-pip-setuptools-and-zcbuildout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upgrade pip, setuptools and zc.buildout</h3>
+<p>We need to ensure that <code>pip</code>, <code>setuptools</code>, and <code>zc.buildout</code> are available in a
+compatible version:</p>
+<p>Create a <code>requirements.txt</code> file:</p>
+<pre><code class="hljs">$ cd /home/senaite/senaitelims
+$ cat &lt;&lt; <span class="hljs-literal">EOF</span> &gt; requirements.txt
+setuptools==<span class="hljs-number">39.2</span><span class="hljs-number">.0</span>
+zc.buildout==<span class="hljs-number">2.13</span><span class="hljs-number">.2</span>
+pip==<span class="hljs-number">19.3</span><span class="hljs-number">.1</span>
+<span class="hljs-literal">EOF</span>
+</code></pre>
+<p>Install the requirements with the <code>pip</code> command of the local Python environment:</p>
+<pre><code class="hljs">$ which pip
+<span class="hljs-regexp">/home/senaite</span><span class="hljs-regexp">/miniconda2/envs</span><span class="hljs-regexp">/senaite/bin</span><span class="hljs-regexp">/pip
+
+$ pip install -r requirements.txt
+</span></code></pre>
+<p><strong>☝️Note:</strong>
+A wrong version of <code>setuptools</code> can lead to the infamous
+<a href="https://github.com/senaite/senaite.lims/issues/106">Error while buildout: There is a version conflict. We already have: UNKNOWN 0.0.0</a></p>
 <p>Re-run the <code>buildout</code> script:</p>
-<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> PYTHONHTTPSVERIFY=0 bin/buildout</span>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">which</span> buildout</span>
+/home/training/miniconda2/envs/senaite/bin/buildout
+<span class="hljs-meta">$</span><span class="bash"> PYTHONHTTPSVERIFY=0 buildout</span>
 </code></pre>
 <p>Also see here: <a href="https://github.com/senaite/senaite.lims#readme">https://github.com/senaite/senaite.lims#readme</a></p>
 <h2><a class="anchor" aria-hidden="true" id="starting-senaite"></a><a href="#starting-senaite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Starting SENAITE</h2>
@@ -162,4 +206,4 @@ After a few moments, SENAITE should be installed and the dashboard view appears.
 <p><img src="/screenshots/dashboard_screen.png" alt="Dashboard Screen" title="Dashboard Screen"></p>
 <p>Congratulations 🙌 you successfully installed SENAITE LIMS on your system!</p>
 <p>Please continue with the next sections to learn the first steps in your new system.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 9.10.2019</em></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/next/quickstart"><span>Quickstart</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#operating-system">Operating system</a></li><li><a href="#a-note-about-versions">A note about Versions</a></li><li><a href="#python">Python</a></li><li><a href="#miniconda">Miniconda</a></li><li><a href="#install-dependencies">Install dependencies</a></li><li><a href="#download-the-plone-unified-installer">Download the Plone unified installer</a></li><li><a href="#install-plone">Install Plone</a></li><li><a href="#install-senaite">Install SENAITE</a></li><li><a href="#starting-senaite">Starting SENAITE</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Documentation</h5><a href="/docs/en/installation.html">Installation</a><a href="/docs/en/quickstart.html">Quickstart</a><a href="/docs/en/sample-basics.html">Sample Basics</a></div><div><h5>Community</h5><a target="_blank" href="https://community.senaite.org">Community Site</a><a target="_blank" href="https://sourceforge.net/projects/senaite/lists/senaite-users">Mailing List</a><a target="_blank" href="https://gitter.im/senaite/Lobby">Gitter Chat</a></div><div><h5>More</h5><a href="https://github.com/senaite">GitHub</a><a class="github-button" href="https://github.com/senaite/senaite.core" data-icon="octicon-star" data-count-href="/senaite/senaite.core/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/senaitelims" class="twitter-follow-button">Follow @senaitelims</a></div></div></section><a href="https://www.senaite.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/senaite_product_logo_grey.svg" alt="SENAITE LIMS"/></a><section class="copyright">Copyright © 2017-2019 <a href="https://www.ridingbytes.com" target="_blank">RIDING BYTES GmbH</a> &amp; <a href="https://www.naralabs.com" target="blank">NARALABS S.L.</a></section><section class="privacy"><a href="privacy">Privacy policy and web legal announcement</a></section><img src="https://piwik.ridingbytes.com/matomo.php?idsite=3&amp;rec=1" style="border:0" alt=""/></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 27.11.2019</em></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/next/quickstart"><span>Quickstart</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#operating-system">Operating system</a></li><li><a href="#a-note-about-versions">A note about Versions</a></li><li><a href="#python">Python</a></li><li><a href="#create-a-new-user">Create a new User</a></li><li><a href="#miniconda">Miniconda</a></li><li><a href="#install-system-dependencies">Install System dependencies</a></li><li><a href="#download-the-plone-unified-installer">Download the Plone unified installer</a></li><li><a href="#install-plone">Install Plone</a></li><li><a href="#install-senaite">Install SENAITE</a><ul class="toc-headings"><li><a href="#upgrade-pip-setuptools-and-zcbuildout">Upgrade pip, setuptools and zc.buildout</a></li></ul></li><li><a href="#starting-senaite">Starting SENAITE</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Documentation</h5><a href="/docs/en/installation.html">Installation</a><a href="/docs/en/quickstart.html">Quickstart</a><a href="/docs/en/sample-basics.html">Sample Basics</a></div><div><h5>Community</h5><a target="_blank" href="https://community.senaite.org">Community Site</a><a target="_blank" href="https://sourceforge.net/projects/senaite/lists/senaite-users">Mailing List</a><a target="_blank" href="https://gitter.im/senaite/Lobby">Gitter Chat</a></div><div><h5>More</h5><a href="https://github.com/senaite">GitHub</a><a class="github-button" href="https://github.com/senaite/senaite.core" data-icon="octicon-star" data-count-href="/senaite/senaite.core/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/senaitelims" class="twitter-follow-button">Follow @senaitelims</a></div></div></section><a href="https://www.senaite.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/senaite_product_logo_grey.svg" alt="SENAITE LIMS"/></a><section class="copyright">Copyright © 2017-2019 <a href="https://www.ridingbytes.com" target="_blank">RIDING BYTES GmbH</a> &amp; <a href="https://www.naralabs.com" target="blank">NARALABS S.L.</a></section><section class="privacy"><a href="privacy">Privacy policy and web legal announcement</a></section><img src="https://piwik.ridingbytes.com/matomo.php?idsite=3&amp;rec=1" style="border:0" alt=""/></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
