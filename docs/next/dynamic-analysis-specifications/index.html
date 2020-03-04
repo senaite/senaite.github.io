@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Dynamic Analysis Specifications · SENAITE</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In the last section you learned how to create an Analysis Specification for a"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Dynamic Analysis Specifications · SENAITE"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/senaite/senaite.github.io/"/><meta property="og:description" content="In the last section you learned how to create an Analysis Specification for a"/><meta property="og:image" content="https://github.com/senaite/senaite.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/senaite/senaite.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/senaite_product_logo_text.svg" alt="SENAITE"/><h2 class="headerTitleWithLogo">SENAITE</h2></a><a href="/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/features" target="_self">Features</a></li><li class=""><a href="/enterprisesolution" target="_self">Enterprise solution</a></li><li class="siteNavGroupActive"><a href="/docs/next/quickstart" target="_self">Documentation</a></li><li class=""><a href="/versions" target="_self">Versions</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Working with Analyses</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/next/quickstart">Quickstart</a></li><li class="navListItem"><a class="navItem" href="/docs/next/update">How to update SENAITE</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Samples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/sample-basics">Sample Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-copy">Copy Samples</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-barcodes">Sample Barcodes</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-analyses">Sample Analyses</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-partitions">Sample Partitions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Analyses<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/analysis-specifications">Analysis Specifications</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/next/dynamic-analysis-specifications">Dynamic Analysis Specifications</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-calculations">Analysis Calculations</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-categorization">Analysis Categorization</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-profiles">Analysis Profiles</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-templates">Analysis Templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Worksheets<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/worksheet-basics">Worksheet Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/next/worksheet-control-references">Worksheet Control References</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Dynamic Analysis Specifications</h1></header><article><div><span><p>In the last section you learned how to create an Analysis Specification for a
+whole Sample. This allows you to define discrete minimum and maximum values
+for a given Analysis of the Sample.</p>
+<p>However, what if you have different ranges depending on e.g. the test method you
+are using or another factor?</p>
+<p>In a small setup, you could probably simply define different analysis
+specifications for each scenario, but it might get quickly confusing and not
+useful anymore when other specific factors like e.g. the gender/age of a
+patient comes into consideration.</p>
+<h2><a class="anchor" aria-hidden="true" id="dynamic-analysis-specifications"></a><a href="#dynamic-analysis-specifications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dynamic Analysis Specifications</h2>
+<p>Since version 1.3.3 of SENAITE we added a new feature called &quot;Dynamic Analysis
+Specifications&quot; to handle exactly such scenarios in a flexible and extensible way.</p>
+<p><em>Dynamic Analyses Specifications</em> are created in the <em>LIMS Setup</em> from an Excel
+Spreadsheet and later be linked to an existing <em>Analysis Specification</em>.</p>
+<h2><a class="anchor" aria-hidden="true" id="add-a-dynamic-analysis-specification"></a><a href="#add-a-dynamic-analysis-specification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a Dynamic Analysis Specification</h2>
+<p>Click on the ⚙️button in the upper right corner and chose the <em>Dynamic Analysis
+Specifications</em> tile and press then the <em>Add</em> Button.</p>
+<p><img src="/screenshots/add_dynamic_analysis_specification_screen.png" alt="Add Dynamic Analysis Specification" title="Add Dynamic Analysis Specification"></p>
+<p>Fill in a meaningful title and upload an Excel spreadsheet with at least the
+columns <code>Keyword</code>, <code>min</code> and <code>max</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="functionality-explained-by-example"></a><a href="#functionality-explained-by-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functionality explained by Example</h2>
+<p>Given is an Excel with the following minimal set of columns:</p>
+<table>
+<thead>
+<tr><th>Keyword</th><th>Method</th><th>min</th><th>max</th></tr>
+</thead>
+<tbody>
+<tr><td>pH</td><td>Method-1</td><td>5</td><td>8</td></tr>
+<tr><td>pH</td><td>Method-2</td><td>6</td><td>7</td></tr>
+</tbody>
+</table>
+<p><strong>☝️Note:</strong>
+Besides <code>min</code> and <code>max</code>, these columns can be defined for each result range:
+<code>warn_min, min_operator, warn_max, max_operator, error</code></p>
+<p>This Excel is uploaded to an <em>Dynamic Analysis Specification</em> object, which is
+linked to an Analysis Specification for the Sample Type &quot;Water&quot;.</p>
+<p><img src="/screenshots/dynamic_analysis_specification.png" alt="Dynamic Analysis Specification" title="Dynamic Analysis Specification"></p>
+<p><strong>☝️Note:</strong>
+The Analysis Specification must define a default specification for the <code>pH</code>
+Analysis. When the Keyword of a selected Analysis of the Specification matches
+with one of the listed Keywords of the Excel Specification file, the Analysis
+will be considered &quot;dynamic&quot; and an icon will be displayed next to the Analysis.
+The dynamic results range will be looked up when entering the result or the
+default specification is used.</p>
+<p>Now assume a new &quot;Water&quot; Sample is created with the <code>pH</code> Analysis to be tested
+with <code>Method-2</code>. The results range selected will be then <code>[6;7]</code>.</p>
+<p>This means that every column after the &quot;Keyword&quot; column is considered as an
+additional <em>criteria</em> to find the correct results range.</p>
+<p>In this case the <code>Keyword</code> AND the <code>Method</code> must match.</p>
+<p>By default, the system looks up the column names, e.g. <code>Method</code>, from the
+database schema of the analysis or the sample.</p>
+<p>In this case, <code>Method</code> is a schema field of Analysis:
+<a href="https://github.com/senaite/senaite.core/blob/master/bika/lims/content/abstractbaseanalysis.py#L343">https://github.com/senaite/senaite.core/blob/master/bika/lims/content/abstractbaseanalysis.py#L343</a></p>
+<h2><a class="anchor" aria-hidden="true" id="defining-a-custom-dynamic-results-range-adapter"></a><a href="#defining-a-custom-dynamic-results-range-adapter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defining a custom Dynamic Results Range Adapter</h2>
+<p>Sometimes it is needed to define more complex matches, e.g. to match the Gender
+or Age of a Patient to find a specification. In that case, it is supported to
+define a custom Adapter like this:</p>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">configure</span>
+    <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://namespaces.zope.org/zope"</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Dynamic Results Range Adapter
+       Looked up in `abstractroutineanalysis.getResultsRange` --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">adapter</span>
+      <span class="hljs-attr">for</span>=<span class="hljs-string">"my.lims.interfaces.IRoutineAnalysis"</span>
+      <span class="hljs-attr">factory</span>=<span class="hljs-string">".dynamicresultsrange.DynamicResultsRange"</span>
+      <span class="hljs-attr">provides</span>=<span class="hljs-string">"bika.lims.interfaces.IDynamicResultsRange"</span>
+      /&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">class</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bika.lims.content.analysis.Analysis"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">implements</span> <span class="hljs-attr">interface</span>=<span class="hljs-string">"my.lims.interfaces.IRoutineAnalysis"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">class</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">configure</span>&gt;</span>
+</code></pre>
+<p>Contents of <code>dynamicresultsrange.py</code>:</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">from</span> bika.lims.interfaces <span class="hljs-keyword">import</span> IDynamicResultsRange
+<span class="hljs-keyword">from</span> bika.lims.interfaces.analysis <span class="hljs-keyword">import</span> IRequestAnalysis
+<span class="hljs-keyword">from</span> zope.interface <span class="hljs-keyword">import</span> implementer
+
+
+<span class="hljs-meta">@implementer(IDynamicResultsRange)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DynamicResultsRange</span><span class="hljs-params">(object)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, analysis)</span>:</span>
+        self.analysis = analysis
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> IRequestAnalysis.providedBy(self.analysis):
+            <span class="hljs-comment"># Cannot grab the patient from analyses not assigned to a Sample</span>
+            <span class="hljs-keyword">return</span> {}
+
+        <span class="hljs-comment"># Get the sample's specificaion</span>
+        sample = self.analysis.getRequest()
+        specification = sample.getSpecification()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> specification:
+            <span class="hljs-comment"># No specification, nothing to do</span>
+            <span class="hljs-keyword">return</span> {}
+
+        <span class="hljs-comment"># Dynamic specification</span>
+        dyn_spec = specification.getDynamicAnalysisSpec()
+
+        <span class="hljs-comment"># Get the patient from the sample</span>
+        sample = self.analysis.getRequest()
+        patient = sample.getField(<span class="hljs-string">"Patient"</span>).get(sample)
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> patient:
+            <span class="hljs-comment"># No patient assigned for this sample, do nothing</span>
+            <span class="hljs-keyword">return</span> {}
+
+        <span class="hljs-comment"># Patient's age (in years)</span>
+        age = patient.getAge()
+        <span class="hljs-comment"># Patient's gender (male/female/dk)</span>
+        sex = patient.getGender()
+
+        <span class="hljs-comment"># Get the dynamic specification for this analysis by keyword</span>
+        <span class="hljs-comment"># We expect the xls to have the columns "keyword", "age" and "sex"</span>
+        keyword = self.analysis.getKeyword()
+        ranges = dyn_spec.get_by_keyword().get(keyword)
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> ranges:
+            <span class="hljs-comment"># No ranges defined for this analysis</span>
+            <span class="hljs-keyword">return</span> {}
+
+        <span class="hljs-comment"># Find a match by age and sex</span>
+        <span class="hljs-keyword">for</span> range <span class="hljs-keyword">in</span> ranges:
+            <span class="hljs-keyword">if</span> range.get(<span class="hljs-string">"age"</span>) == age <span class="hljs-keyword">and</span> range.get(<span class="hljs-string">"sex"</span>) == sex:
+                <span class="hljs-keyword">return</span> range
+
+        <span class="hljs-comment"># No dynamic specification found for this analysis and patient</span>
+        <span class="hljs-keyword">return</span> {}
+</code></pre>
+<p>Congratulations 🙌 you learned how to create and link dynamic analysis
+specifications and how to extend the functionality with a custom Dynamic Results
+Range Adapter.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4.3.2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/analysis-specifications"><span class="arrow-prev">← </span><span>Analysis Specifications</span></a><a class="docs-next button" href="/docs/next/analysis-calculations"><span>Analysis Calculations</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#dynamic-analysis-specifications">Dynamic Analysis Specifications</a></li><li><a href="#add-a-dynamic-analysis-specification">Add a Dynamic Analysis Specification</a></li><li><a href="#functionality-explained-by-example">Functionality explained by Example</a></li><li><a href="#defining-a-custom-dynamic-results-range-adapter">Defining a custom Dynamic Results Range Adapter</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Documentation</h5><a href="/docs/en/installation.html">Installation</a><a href="/docs/en/quickstart.html">Quickstart</a><a href="/docs/en/sample-basics.html">Sample Basics</a></div><div><h5>Community</h5><a target="_blank" href="https://community.senaite.org">Community Site</a><a target="_blank" href="https://sourceforge.net/projects/senaite/lists/senaite-users">Mailing List</a><a target="_blank" href="https://gitter.im/senaite/Lobby">Gitter Chat</a></div><div><h5>More</h5><a href="https://github.com/senaite">GitHub</a><a class="github-button" href="https://github.com/senaite/senaite.core" data-icon="octicon-star" data-count-href="/senaite/senaite.core/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/senaitelims" class="twitter-follow-button">Follow @senaitelims</a></div></div></section><a href="https://www.senaite.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/senaite_product_logo_grey.svg" alt="SENAITE LIMS"/></a><section class="copyright">Copyright © 2017-2020 <a href="https://www.ridingbytes.com" target="_blank">RIDING BYTES GmbH</a> &amp; <a href="https://www.naralabs.com" target="blank">NARALABS S.L.</a></section><section class="privacy"><a href="privacy">Privacy policy and web legal announcement</a></section><img src="https://piwik.ridingbytes.com/matomo.php?idsite=3&amp;rec=1" style="border:0" alt=""/></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
