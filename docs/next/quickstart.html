@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>A quick start into SENAITE · SENAITE</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this guide we will show you how to create your first sample in SENAITE."/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="A quick start into SENAITE · SENAITE"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/senaite/senaite.github.io/"/><meta property="og:description" content="In this guide we will show you how to create your first sample in SENAITE."/><meta property="og:image" content="https://github.com/senaite/senaite.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/senaite/senaite.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/senaite_product_logo_text.svg" alt="SENAITE"/><h2 class="headerTitleWithLogo">SENAITE</h2></a><a href="/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/features" target="_self">Features</a></li><li class=""><a href="/enterprisesolution" target="_self">Enterprise solution</a></li><li class=""><a href="/docs/installation.html" target="_self">Documentation</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/installation">Installation</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/next/quickstart">Quickstart</a></li><li class="navListItem"><a class="navItem" href="/docs/next/update">How to update SENAITE</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Samples<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/sample-basics">Sample Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-copy">Copy Samples</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-barcodes">Sample Barcodes</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-analyses">Sample Analyses</a></li><li class="navListItem"><a class="navItem" href="/docs/next/sample-partitions">Sample Partitions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Analyses<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/analysis-specifications">Analysis Specifications</a></li><li class="navListItem"><a class="navItem" href="/docs/next/dynamic-analysis-specifications">Dynamic Analysis Specifications</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-calculations">Analysis Calculations</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-categorization">Analysis Categorization</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-profiles">Analysis Profiles</a></li><li class="navListItem"><a class="navItem" href="/docs/next/analysis-templates">Analysis Templates</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Working with Worksheets<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/worksheet-basics">Worksheet Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/next/worksheet-control-references">Worksheet Control References</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">A quick start into SENAITE</h1></header><article><div><span><p>In this guide we will show you how to create your first sample in SENAITE.</p>
+<h2><a class="anchor" aria-hidden="true" id="configure-senaite-for-the-first-sample"></a><a href="#configure-senaite-for-the-first-sample" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure SENAITE for the first sample</h2>
+<p>When SENAITE is initially installed, it comes without any configuration and
+needs to be setup first to be able to create samples.</p>
+<h3><a class="anchor" aria-hidden="true" id="open-the-lims-setup-screen"></a><a href="#open-the-lims-setup-screen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open the LIMS Setup Screen</h3>
+<p>Navigate to the <em>LIMS Setup</em> by clicking the ⚙️ button in the upper right corner.</p>
+<p><img src="/screenshots/setup_screen.png" alt="Setup Screen" title="SENAITE LIMS Setup"></p>
+<p>This screen shows all the available setup items to configure SENAITE for your lab.</p>
+<p><strong>☝️Note:</strong>
+The ⚙️button is almost on every screen available and allows you to quickly
+navigate to the LIMS Setup.</p>
+<p><strong>🤓 Pro-Tip:</strong>
+You can also press the key-combination <code>Ctrl+Space</code> to open the <em>Spotlight
+Search</em>. You can search then the setup location you want to visit and select
+with the <code>Up</code> and <code>Down</code> arrow keys of your keyboard the location and press
+<code>Enter</code>. SENAITE will navigate you then directly to the item you requested.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-lab-departments"></a><a href="#add-lab-departments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Lab Departments</h3>
+<p>Firstly, we want to add a lab department. Therefore, click on the <em>Lab
+Departments</em> tile to navigate to the listing of laboratory departments.</p>
+<p><img src="/screenshots/lab_departments_listing.png" alt="Lab Departments" title="Lab Departments"></p>
+<p>Click on the <em>Add</em> button above the listing table to add a new lab department.</p>
+<p><img src="/screenshots/add_lab_department_screen.png" alt="Add Lab Department" title="Add a new Lab Department"></p>
+<p>Enter the following values in the add form:</p>
+<ul>
+<li>Title: <code>Chemistry</code></li>
+<li>Description: <code>Analytical chemistry department</code></li>
+</ul>
+<p>Click the <em>Save</em> button when you are done.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-a-laboratory-manager"></a><a href="#add-a-laboratory-manager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a Laboratory Manager</h3>
+<p>The <code>admin</code> user the system created by default on install should only be used
+for maintenance purposes and by qualified personnel. SENAITE ships with default
+user roles and the most common are:</p>
+<ul>
+<li><p><code>Lab Manager</code>: users with this role can manage the LIMS from a functional
+perspective and have rights to do almost everything, albeit they are bound to
+Good Laboratory Practices (GLP) and ISO policies.</p></li>
+<li><p><code>Lab Clerk</code>: users with this role can manage clients and some setup
+configurations. They are mostly responsible of reviewing samples on reception,
+communication with clients and distribution of published results.</p></li>
+<li><p><code>Analyst</code>: users with this role do not have rights to manage. Analysts are
+the users who enter analysis results into the system.</p></li>
+</ul>
+<p>Move to the <em>LIMS Setup</em> screen by clicking again the ⚙ button in the upper
+right corner of your screen.</p>
+<p>Click now the <em>Lab Contacts</em> link. Press the <em>Add</em> button to add a new Contact
+and fill the form as follows:</p>
+<ul>
+<li>Firstname: <code>Lab</code></li>
+<li>Surname: <code>Manager</code></li>
+<li>Departments: <code>Chemistry</code></li>
+</ul>
+<p>Click the <em>Save</em> button.</p>
+<p>At this point, we've created a laboratory contact, but there is still the need
+to create a user bound to this contact to be able to login to the system. Now,
+click to <em>Login Details</em> tab and fill the form as follows:</p>
+<ul>
+<li>User Name: <code>labman</code></li>
+<li>Password: <code>labman</code></li>
+<li>Confirm Password: <code>labman</code></li>
+<li>Email: <code>labman@example.org</code></li>
+<li>Add to the following groups: choose <code>LabManagers</code></li>
+</ul>
+<p>Press the <em>Save</em> button.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-a-laboratory-analyst"></a><a href="#add-a-laboratory-analyst" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a Laboratory Analyst</h3>
+<p>Now, go back to <em>Lab Contacts</em> list by either clicking the link from the
+breadcrumbs bar at the top or by clicking again the ⚙ button in the upper right
+corner of your screen. Then, follow the abovementioned procedure to create a new
+contact with the following information:</p>
+<ul>
+<li>Firstname: <code>Lab</code></li>
+<li>Surname: <code>Analyst</code></li>
+<li>Departments: <code>Chemistry</code></li>
+</ul>
+<p>Click the <em>Save</em> button and follow same steps as previous section to create a
+new user, but with role Analyst:</p>
+<ul>
+<li>User Name: <code>analyst</code></li>
+<li>Password: <code>analyst</code></li>
+<li>Confirm Password: <code>analyst</code></li>
+<li>Email: <code>analyst@example.org</code></li>
+<li>Add to the following groups: choose <code>Analysts</code></li>
+</ul>
+<p>Press the <em>Save</em> button.</p>
+<h3><a class="anchor" aria-hidden="true" id="login-as-laboratory-manager"></a><a href="#login-as-laboratory-manager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Login as Laboratory Manager</h3>
+<p>Press the <em>Log out</em> element from the blue dropdown list at top-right with title
+<em>admin</em>.</p>
+<p>You are now logged out from SENAITE. Use the credentials for the labman user you
+created in the previous section:</p>
+<ul>
+<li>Login Name: <code>labman</code></li>
+<li>Password: <code>labman</code></li>
+</ul>
+<p>Press the <em>Log in</em> button. Note that <em>Lab Manager</em> is displayed now in the
+blue box at top-right corner.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-analysis-categories"></a><a href="#add-analysis-categories" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Analysis Categories</h3>
+<p>Move to the <em>LIMS Setup</em> screen by clicking again the ⚙ button in the
+upper right corner of your screen.</p>
+<p>Click now the <em>Analysis Categories</em> link to add a category for the analyses you
+add in the next step.</p>
+<p>Currently, your SENAITE installation has no analysis categories configured.</p>
+<p><img src="/screenshots/analysis_categories_listing.png" alt="Analysis Categories" title="Analysis Categories"></p>
+<p>Let's add the category <em>Water Chemistry</em> to group together chemical water
+analyses by clicking the <em>Add</em> Button above the listing table.</p>
+<p><img src="/screenshots/add_analysis_category_screen.png" alt="Add Analysis Category" title="Add a new Analysis Category"></p>
+<ul>
+<li>Title: <code>Water Chemistry</code></li>
+<li>Description: <code>Chemical water analyses</code></li>
+<li>Department: <code>Chemistry</code></li>
+</ul>
+<p>Click again the <em>Save</em> button when you are done.</p>
+<p><strong>☝️Note:</strong>
+Analysis categories allows you to group analyses regardless of the department
+they are assigned to. Thus, you can have analyses in same category that belong
+to different departments. Here we've created a &quot;Water chemistry&quot; category, but
+we could rather create a category called &quot;Liquids&quot; or &quot;Mining&quot;. The criteria
+used to group analyses depends on your laboratory needs.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-analysis-services"></a><a href="#add-analysis-services" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Analysis Services</h3>
+<p>Analysis services represent the catalog of tests/analyses the laboratory is able
+to perform. Although in most cases we think of an Analysis Service as a single
+test for which we expect a single result, their level of granularity may
+depend on the laboratory needs and/or compiled Standard Operating Procedures
+(SOPs).</p>
+<p>We add some analysis services by clicking the <em>Analysis Services</em> link in the <em>LIMS Setup</em> screen.</p>
+<p>In this example we are adding <strong>Calcium</strong>, <strong>Magnesium</strong> and <strong>Total Hardness</strong>.</p>
+<p><img src="/screenshots/analysis_services_listing.png" alt="Analysis Services" title="Analysis Services"></p>
+<p>Proceed like in the previous examples by clicking on the <em>Add</em> button and entering the values, e.g.
+for the <em>Calcium</em> analysis as follows:</p>
+<ul>
+<li>Title: <code>Calcium</code></li>
+<li>Unit: <code>mg</code></li>
+<li>Analysis Keyword: <code>Ca</code></li>
+<li>Point of Capture: <code>Lab</code></li>
+<li>Analysis Category: <code>Water Chemistry</code></li>
+<li>Price (excluding VAT): <code>10</code></li>
+<li>Department <code>Chemistry</code></li>
+</ul>
+<p>Repeat the steps for the <strong>Magnesium</strong> and <strong>Total Hardness</strong> Analysis Services
+and chose <code>Mg</code> and <code>THCaCO3</code> as the Analysis Keyword respectively.</p>
+<p><strong>☝️Note:</strong>
+The &quot;Analysis Keyword&quot; is an important field and must be unique. This keyword
+will be used widely by the system. Amongst other uses, keywords are used in
+calculations or to find matches when importing results from instruments. They
+can also be displayed in results reports if needed. <a href="https://en.wikipedia.org/wiki/CAS_Registry_Number" title="CAS Registry Number at Wikipedia">CAS Numbers</a> for
+chemical substances or <a href="https://loinc.org/" title="Logical Observation Identifiers Names and Codes (LOINC)">LOINC</a> codes for health measurements are good
+keyword choices.</p>
+<p><strong>🤓 Pro-Tip:</strong>
+You can also duplicate existing Analysis Services from the listing view by
+selecting the checkbox of the Service you want to copy and click on the
+<em>Duplicate</em> button.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-sample-types"></a><a href="#add-sample-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Sample Types</h3>
+<p>To be able to create samples in the system later, we need to add some <em>Sample
+Types</em> as well. Navigate therefore to the <em>LIMS Setup</em> and click on the <em>Sample
+Types</em> tile.</p>
+<p><img src="/screenshots/sample_types_listing.png" alt="Sample Types" title="Sample Types"></p>
+<p>Create a new Sample Type &quot;Water&quot; by clicking on the &quot;Add&quot; button.</p>
+<p><img src="/screenshots/add_sample_type_screen.png" alt="Add Sample Type" title="Add Sample Type"></p>
+<p>Enter the following values in the add form:</p>
+<ul>
+<li>Title: <code>Water</code></li>
+<li>Prefix: <code>H2O</code></li>
+<li>Minimum Volume: <code>100 ml</code></li>
+</ul>
+<p><strong>☝️Note:</strong>
+The Sample Type Prefix <code>H2O</code> will control the generated ID of the new sample
+later. Please always chose a concise and short identifier!</p>
+<h2><a class="anchor" aria-hidden="true" id="creating-the-first-sample"></a><a href="#creating-the-first-sample" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating the first sample</h2>
+<p>All Samples reside below <em>Clients</em> in SENAITE.</p>
+<p><strong>☝️Note:</strong>
+Although the system was initially designed for contract analyses labs, it is
+also perfectly possible to configure the system for non-contract-analysis labs,
+e.g. for quality control analyses for the producing industry. Simply add just
+one client which represents your own company.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-clients"></a><a href="#add-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Clients</h3>
+<p>Navigate to the <em>Clients</em> listing over the left side menu. Currently there are
+no Clients in the database.</p>
+<p><img src="/screenshots/clients_listing.png" alt="Clients" title="Clients"></p>
+<p>Add a new client by clicking on the <em>Add</em> button.</p>
+<p><img src="/screenshots/add_client_screen.png" alt="Add Client" title="Add Client"></p>
+<p>Enter the following values in the add form:</p>
+<ul>
+<li>Name: <code>Happy Hills</code></li>
+<li>Client ID: <code>HH</code></li>
+</ul>
+<p>Click the <em>Save</em> button when you are done.</p>
+<p><strong>☝️Note:</strong>
+The <code>Client ID</code> must be unique in the system.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-client-contacts"></a><a href="#add-client-contacts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Client Contacts</h3>
+<p>Each Client needs to have at least one Client Contact which represents a natural
+person in the system. As we will see in the next section, client contact is a
+mandatory field when creating a sample. The reason is that the client contact
+assigned to a sample will be the laboratory's first point of contact during the
+sample's life-cycle within the lab facilities.</p>
+<p>Make sure you are within the newly created <code>Happy Hills</code> client and choose then
+the <em>Contacts</em> tab.</p>
+<p><img src="/screenshots/client_contact_listing.png" alt="Client Contacts" title="Client Contacts"></p>
+<p>Click on the <em>Add</em> button and create a new Client Contact with either your own
+details or as shown in the screenshot above.</p>
+<p><strong>☝️Note:</strong>
+The <code>Email Address</code> of the contact will be later used to send the result report.
+The system need to have a configured Email Server setting as well.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-new-samples"></a><a href="#add-new-samples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add new Samples</h3>
+<p>As already mentioned, all samples reside inside Client Entities in the database.
+Now that we just created a new Client, we can also add new Samples for this
+Client.</p>
+<p>Make sure you are in the newly created <code>Happy Hills</code> Client and choose the
+<em>Samples</em> tab.</p>
+<p><img src="/screenshots/client_samples_listing.png" alt="Client Samples" title="Client Samples"></p>
+<p><strong>☝️Note:</strong>
+The number next to the Add button lets you choose the number of samples you want
+to register in the system at once. You need to select a value before you click
+the <em>Add</em> button, otherwise already entered values will get lost during reload.</p>
+<p>Choose <code>2</code> and click <em>Add</em>.</p>
+<p><img src="/screenshots/add_samples_screen.png" alt="Add Samples" title="Add Samples"></p>
+<p>Each displayed column represents a sample.</p>
+<p><strong>🤓 Pro-Tip:</strong>
+The button in the second column lets you copy over the row values from the first
+column to the other Samples.</p>
+<p><strong>🤓 Pro-Tip:</strong>
+You can globally set the visibility and order of the fields by clicking on the
+<em>Manage Form Fields</em> link in the upper left corner of the form. Simply check
+only the fields you need and change the order by dragging and dropping the lines
+in that management view.</p>
+<p>Enter the following values in the add form:</p>
+<ul>
+<li>Contact: <code>Rita Mohale</code></li>
+<li>Date Sampled: Click the <code>now</code> button in the calendar popup to chose the
+current date and time</li>
+<li>Sample Type: <code>Water</code></li>
+<li>Lab Analyses: Select <code>Calcium</code>, <code>Magnesium</code> and <code>Total Hardness</code></li>
+</ul>
+<p>Click on the <em>Save</em> button in the lower left corner to proceed.</p>
+<p><img src="/screenshots/client_samples_listing_2.png" alt="Client Samples" title="Client Samples"></p>
+<p>Congratulations, you successfully created your first Sample in SENAITE.</p>
+<p>You can click now on the generated <em>Sample ID</em> link to inspect the created sample.
+Also note how the generated ID contains our referenced <em>Sample Type</em> <code>H2O</code> and
+is initially in the state <code>Sample due</code>, which means that the sample has
+physically not yet arrived in the lab.</p>
+<p>Continue then with the next section to learn the basic handling of samples in
+SENAITE.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10.10.2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/installation"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/docs/next/update"><span>How to update SENAITE</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#configure-senaite-for-the-first-sample">Configure SENAITE for the first sample</a><ul class="toc-headings"><li><a href="#open-the-lims-setup-screen">Open the LIMS Setup Screen</a></li><li><a href="#add-lab-departments">Add Lab Departments</a></li><li><a href="#add-a-laboratory-manager">Add a Laboratory Manager</a></li><li><a href="#add-a-laboratory-analyst">Add a Laboratory Analyst</a></li><li><a href="#login-as-laboratory-manager">Login as Laboratory Manager</a></li><li><a href="#add-analysis-categories">Add Analysis Categories</a></li><li><a href="#add-analysis-services">Add Analysis Services</a></li><li><a href="#add-sample-types">Add Sample Types</a></li></ul></li><li><a href="#creating-the-first-sample">Creating the first sample</a><ul class="toc-headings"><li><a href="#add-clients">Add Clients</a></li><li><a href="#add-client-contacts">Add Client Contacts</a></li><li><a href="#add-new-samples">Add new Samples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Documentation</h5><a href="/docs/en/installation.html">Installation</a><a href="/docs/en/quickstart.html">Quickstart</a><a href="/docs/en/sample-basics.html">Sample Basics</a></div><div><h5>Community</h5><a target="_blank" href="https://community.senaite.org">Community Site</a><a target="_blank" href="https://sourceforge.net/projects/senaite/lists/senaite-users">Mailing List</a><a target="_blank" href="https://gitter.im/senaite/Lobby">Gitter Chat</a></div><div><h5>More</h5><a href="https://github.com/senaite">GitHub</a><a class="github-button" href="https://github.com/senaite/senaite.core" data-icon="octicon-star" data-count-href="/senaite/senaite.core/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/senaitelims" class="twitter-follow-button">Follow @senaitelims</a></div></div></section><a href="https://www.senaite.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/senaite_product_logo_grey.svg" alt="SENAITE LIMS"/></a><section class="copyright">Copyright © 2017-2025 <a href="https://www.ridingbytes.com" target="_blank">RIDING BYTES GmbH</a> &amp; <a href="https://www.naralabs.com" target="blank">NARALABS S.L.</a></section><section class="privacy"><a href="privacy">Privacy policy and web legal announcement</a></section><img src="https://piwik.ridingbytes.com/matomo.php?idsite=3&amp;rec=1" style="border:0" alt=""/></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
